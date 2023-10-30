@@ -2,12 +2,14 @@
 
 {% block content %}
 
+<a href="/add/listing/" class="text-blue-500">Create a new lsiting</a>
+
 {% for listing in listings %}
 
-<a href="/listing/{{ listing.id }}/"
-class="px-3 py-2 bg-gray-100 rounded-sm"
->{{ listing.title }}</a>
-
+<div class="px-3 mt-2 py-2 bg-gray-100 rounded-sm">
+    <h3 class="text-3xl text-gray-900">{{ listing.title }}</h3>
+    <a href="/listing/{{ listing.id }}/" class="text-blue-500">View details</a>
+</div>
 {% endfor %}
 
 {% endblock content %}
